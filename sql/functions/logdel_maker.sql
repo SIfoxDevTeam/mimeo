@@ -280,7 +280,7 @@ ELSIF v_table_exists = false THEN
 END IF;
 
 IF v_table_exists THEN
-    RAISE NOTICE 'Destination table % already exists. No data or indexes were pulled from source: %. Recommend making index on special column mimeo_source_deleted if it doesn''t have one', p_dest_table;
+    RAISE NOTICE 'Destination table % already exists. No data or indexes were pulled from source: %. Recommend making index on special column mimeo_source_deleted if it doesn''t have one', p_dest_table, p_src_table;
 END IF;
 
 RAISE NOTICE 'Analyzing destination table...';
